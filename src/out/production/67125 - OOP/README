@@ -1,0 +1,46 @@
+niso,inbarbahnof
+207447970,207009721
+
+1.(ACCORDING TO UML)
+AsciiArtAlgorithm is a class that wraps the main core of our code it connects between
+the image rendering and the ascii art rendering.
+
+ImageRenderer is a class that contains image.it is in charge of padding the image and splitting it into
+ blocks so we are able to render it as ascii art later has an image.
+
+Shell is a class that is in charge of running the UI of the program and making the magic
+of creating the ascii art come true.
+
+All of the classes above have a member field of the class Image in order to use it in their methods.
+
+SubImgCharMatcher is a class that is in charge of taking a charset and matchcing each character
+to a sub image of the original image by matching brightness to the character's brightness.
+
+Exceptions:
+All the exceptions are in the package exceptions and they are all custom exceptions that we created.
+They are needed to handle the errors that might occur in the class Shell.
+
+2. Our usage of dataset and why we chose each one:
+In SubImgCharMatcher we used TreeMap and TreeSet to store the characters and their brightness.
+The reason we chose it is because of the fact that we need to store the characters in a sorted order
+Also, we wanted to optimize access to dataset together with the special ability to find the closest value in
+Optimal time log(n) and finding min and max in O(1).
+
+About memory optimization, we chose to use a TreeSet and not a HashSet because we wanted to avoid duplicates
+and we wanted to store the characters in a sorted order.
+
+In ImageRenderer we used a 2D array of Pixels to store the image.
+The reason we chose it is because we wanted to store the image in a way that we can access each pixel in O(1)
+
+In Shell we used a TreeSet to store the characters in a sorted order.
+
+3. How did we handle exceptions in java to handle errors?
+
+We created custom exceptions in the package exceptions and we used try and catch blocks to handle them.
+We used the try and catch  in class Shell to handle the errors that might occur by user.
+
+4. SubImgCharMatcher changes of api : we did none.
+
+5. Changes to api in given classes:
+We did no changes to api.
+
