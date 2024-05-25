@@ -1,4 +1,4 @@
-"# ASCII-art-converter" 
+### "# ASCII-art-converter" ### 
 
 Introducing an ASCII art converter for images with a Shell interface as the main file,
 Utilizing Java exceptions to handle incorrect user inputs ensures smooth interaction and error management throughout the program.
